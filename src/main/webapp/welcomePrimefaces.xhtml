@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
+<HTML xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -41,6 +41,7 @@
 
                 <p:layoutUnit position="center">
                     Welcome to PrimeFaces
+                    #{welcomeController.doWelcome()}
                 </p:layoutUnit>
 
             </p:layout>
@@ -48,5 +49,5 @@
         </h:body>
 
     </f:view>
-</html>
+</HTML>
 
