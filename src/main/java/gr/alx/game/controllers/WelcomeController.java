@@ -1,7 +1,7 @@
-package gr.alx.game.gr.alx.game.controllers;
+package gr.alx.game.controllers;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
 /**
@@ -12,6 +12,7 @@ import javax.inject.Named;
  * To change this template use File | Settings | File Templates.
  */
 @Named
+@RequestScoped
 public class WelcomeController {
 
     public String doWelcome(){
