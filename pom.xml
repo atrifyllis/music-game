@@ -20,28 +20,30 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
+      <dependency>
+        <groupId>org.eclipse.persistence</groupId>
+        <artifactId>eclipselink</artifactId>
+        <version>2.5.0</version>
+        <scope>provided</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <dependencies>
-      <dependency>
-          <groupId>org.hibernate</groupId>
-          <artifactId>hibernate-entitymanager</artifactId>
-          <version>4.2.2.Final</version>
-          <!--<scope>provided</scope>-->
-      </dependency>
-      <dependency>
-          <groupId>org.hibernate.javax.persistence</groupId>
-          <artifactId>hibernate-jpa-2.0-api</artifactId>
-          <!--<scope>provided</scope>-->
-          <version>1.0.0.Final</version>
-      </dependency>
-      <dependency>
-          <groupId>org.hibernate</groupId>
-          <artifactId>hibernate-jpamodelgen</artifactId>
-          <version>1.2.0.Final</version>
-          <!--<scope>provided</scope>-->
-      </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.hibernate</groupId>-->
+      <!--<artifactId>hibernate-entitymanager</artifactId>-->
+      <!--<version>4.2.2.Final</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.hibernate.javax.persistence</groupId>-->
+      <!--<artifactId>hibernate-jpa-2.0-api</artifactId>-->
+      <!--<version>1.0.0.Final</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.hibernate</groupId>-->
+      <!--<artifactId>hibernate-jpamodelgen</artifactId>-->
+      <!--<version>1.2.0.Final</version>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>commons-fileupload</groupId>
       <artifactId>commons-fileupload</artifactId>
@@ -64,7 +66,6 @@
       <artifactId>primefaces</artifactId>
       <version>3.5</version>
     </dependency>
-
     <dependency>
       <groupId>org.jboss.spec.javax.servlet</groupId>
       <artifactId>jboss-servlet-api_3.0_spec</artifactId>
@@ -95,7 +96,11 @@
       <artifactId>bootstrap</artifactId>
       <version>1.0.9</version>
     </dependency>
-
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>eclipselink</artifactId>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
   <repositories>
     <repository>
@@ -154,32 +159,32 @@
           </compilerArguments>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.bsc.maven</groupId>
-        <artifactId>maven-processor-plugin</artifactId>
-        <version>2.2.4</version>
-        <executions>
-          <execution>
-            <id>process</id>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>process</goal>
-            </goals>
-            <configuration>
-              <processors>
-                <processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
-              </processors>
-            </configuration>
-          </execution>
-        </executions>
-        <dependencies>
-          <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-jpamodelgen</artifactId>
-            <version>1.2.0.Final</version>
-          </dependency>
-        </dependencies>
-      </plugin>
+      <!--<plugin>-->
+        <!--<groupId>org.bsc.maven</groupId>-->
+        <!--<artifactId>maven-processor-plugin</artifactId>-->
+        <!--<version>2.2.4</version>-->
+        <!--<executions>-->
+          <!--<execution>-->
+            <!--<id>process</id>-->
+            <!--<phase>generate-sources</phase>-->
+            <!--<goals>-->
+              <!--<goal>process</goal>-->
+            <!--</goals>-->
+            <!--<configuration>-->
+              <!--<processors>-->
+                <!--<processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>-->
+              <!--</processors>-->
+            <!--</configuration>-->
+          <!--</execution>-->
+        <!--</executions>-->
+        <!--<dependencies>-->
+          <!--<dependency>-->
+            <!--<groupId>org.hibernate</groupId>-->
+            <!--<artifactId>hibernate-jpamodelgen</artifactId>-->
+            <!--<version>1.2.0.Final</version>-->
+          <!--</dependency>-->
+        <!--</dependencies>-->
+      <!--</plugin>-->
     </plugins>
   </build>
 </project>

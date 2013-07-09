@@ -1,6 +1,6 @@
 package gr.alx.game.ejb;
 
-import gr.alx.game.model.User;
+import gr.alx.game.model.GameUser;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -13,7 +13,11 @@ public class UserDao
     @PersistenceContext
     EntityManager em;
 
-    public List<User> listUsers(){
-        return em.createQuery("select u from User u", User.class).getResultList();
+    public List<GameUser> listUsers(){
+        return em.createQuery("select u from GameUser u", GameUser.class).getResultList();
+    }
+
+    public void addUser(GameUser user){
+        em.persist(user);
     }
 }
