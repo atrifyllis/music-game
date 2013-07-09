@@ -25,16 +25,17 @@ public class GameUser implements Serializable
    @Column(name = "version")
    private int version = 0;
 
-   @Column
+   @Column(unique = true)
    private String username;
 
    public GameUser()
    {
    }
 
-   public GameUser(String username)
+   public GameUser(String username, String email)
    {
       this.username = username;
+      this.email = email;
    }
 
    public Long getId()
