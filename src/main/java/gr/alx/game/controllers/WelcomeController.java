@@ -25,7 +25,7 @@ public class WelcomeController {
     public String doWelcome(){
         GameUser user = new GameUser("alex");
         userDao.addUser(user);
-        List users =  userDao.listUsers();
+        List<GameUser> users = userDao.listUsers();
         return "test"+users.size();
     }
 }
