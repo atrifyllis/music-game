@@ -3,6 +3,9 @@ package gr.alx.game.util;
 import gr.alx.game.ejb.UserDao;
 import gr.alx.game.model.GameUser;
 
+import javax.annotation.PostConstruct;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,11 +19,14 @@ import java.util.Map;
  * Time: 2:17 μμ
  * To change this template use File | Settings | File Templates.
  */
+@Singleton
+@Startup
 public class DatabaseUsersGenerator {
 
     @Inject
     UserDao userDao;
 
+    @PostConstruct
     public Map<String, GameUser> initGameUsers() {
         Map<String, GameUser> users = new HashMap();
         if (userDao.listUsers().size() == 0) {

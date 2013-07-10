@@ -12,11 +12,6 @@ import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import gr.alx.game.model.GameUser;
-
-import java.util.Set;
-import java.util.HashSet;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -34,7 +29,7 @@ public class GameHistory implements Serializable {
     private Date date;
 
     @OneToOne
-    private GameUser userid;
+    private GameUser user;
 
     @Column
     private String title;
@@ -69,12 +64,12 @@ public class GameHistory implements Serializable {
         this.date = date;
     }
 
-    public GameUser getUserid() {
-        return this.userid;
+    public GameUser getUser() {
+        return this.user;
     }
 
-    public void setUserid(final GameUser userid) {
-        this.userid = userid;
+    public void setUser(final GameUser user) {
+        this.user = user;
     }
 
     public String getTitle() {
@@ -114,7 +109,7 @@ public class GameHistory implements Serializable {
         if (lyrics != null ? !lyrics.equals(that.lyrics) : that.lyrics != null) return false;
         if (status != null ? !status.equals(that.status) : that.status != null) return false;
         if (title != null ? !title.equals(that.title) : that.title != null) return false;
-        if (!userid.equals(that.userid)) return false;
+        if (!user.equals(that.user)) return false;
 
         return true;
     }
@@ -124,7 +119,7 @@ public class GameHistory implements Serializable {
         int result = id.hashCode();
         result = 31 * result + version;
         result = 31 * result + date.hashCode();
-        result = 31 * result + userid.hashCode();
+        result = 31 * result + user.hashCode();
         result = 31 * result + (title != null ? title.hashCode() : 0);
         result = 31 * result + (status != null ? status.hashCode() : 0);
         result = 31 * result + (lyrics != null ? lyrics.hashCode() : 0);
@@ -137,7 +132,7 @@ public class GameHistory implements Serializable {
         sb.append("id=").append(id);
         sb.append(", version=").append(version);
         sb.append(", date=").append(date);
-        sb.append(", userid=").append(userid);
+        sb.append(", userid=").append(user);
         sb.append(", title='").append(title).append('\'');
         sb.append(", status='").append(status).append('\'');
         sb.append(", lyrics='").append(lyrics).append('\'');

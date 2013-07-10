@@ -24,11 +24,11 @@ public class WelcomeController {
 
     @Inject
     UserDao userDao;
-    @Inject
-    DatabaseUsersGenerator usersGenerator;
+//    @Inject
+//    DatabaseUsersGenerator usersGenerator;
 
     public String doWelcome(){
-        Map<String,GameUser> userMap = usersGenerator.initGameUsers();
+//        Map<String,GameUser> userMap = usersGenerator.initGameUsers();
         GameUser user = new GameUser("test", "test");
 
         try {
