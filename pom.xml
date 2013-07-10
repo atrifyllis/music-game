@@ -78,6 +78,11 @@
       <artifactId>arquillian-junit-container</artifactId>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>org.jboss.arquillian.extension</groupId>
+          <artifactId>arquillian-transaction-jta</artifactId>
+          <version>1.0.0.Alpha3</version>
+      </dependency>
   </dependencies>
   <repositories>
     <repository>
@@ -169,11 +174,11 @@
           <plugin>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.14.1</version>
-            <configuration>
-              <systemPropertyVariables>
-                <arquillian.launch>GLASSFISH_EMBEDDED_3.1</arquillian.launch>
-              </systemPropertyVariables>
-            </configuration>
+            <!--<configuration>-->
+              <!--<systemPropertyVariables>-->
+                <!--<arquillian.launch>GLASSFISH_EMBEDDED_3.1</arquillian.launch>-->
+              <!--</systemPropertyVariables>-->
+            <!--</configuration>-->
           </plugin>
         </plugins>
       </build>
