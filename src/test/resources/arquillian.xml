@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<arquillian xmlns="http://jboss.org/schema/arquillian" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jboss.org/schema/arquillian http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
-  <container qualifier="GLASSFISH_REMOTE_3.1_(REST)"/>
+<arquillian xmlns="http://jboss.org/schema/arquillian" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://jboss.org/schema/arquillian http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+    <container qualifier="GLASSFISH_REMOTE_3.1_(REST)"/>
+    <engine>
+        <property name="deploymentExportPath">target/arquillian</property>
+    </engine>
+    <container default="true" qualifier="glassfish">
+        <configuration>
+            <property name="resourcesXml">src/test/resources/glassfish-resources.xml</property>
+        </configuration>
+    </container>
 </arquillian>
