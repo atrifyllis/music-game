@@ -28,7 +28,7 @@ public class DatabaseUsersGenerator {
 
     @PostConstruct
     public void initGameUsers() {
-        Map<String, GameUser> users = new HashMap();
+        Map<String, GameUser> users = new HashMap<>();
         if (userDao.listUsers().size() == 0) {
 
             GameUser user = new GameUser("Alexandra", "alexkalantzi@gmail.com");

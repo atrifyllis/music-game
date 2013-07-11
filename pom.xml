@@ -191,7 +191,7 @@
         <dependency>
           <groupId>org.glassfish.extras</groupId>
           <artifactId>glassfish-embedded-all</artifactId>
-          <version>3.2-b06</version>
+          <version>3.2-b04</version>
         </dependency>
       </dependencies>
     </profile>
