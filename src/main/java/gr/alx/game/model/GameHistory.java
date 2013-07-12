@@ -40,6 +40,17 @@ public class GameHistory implements Serializable {
     @Column
     private String lyrics;
 
+    public GameHistory() {
+    }
+
+    public GameHistory(Date date, GameUser user, String title, String status, String lyrics) {
+        this.date = date;
+        this.user = user;
+        this.title = title;
+        this.status = status;
+        this.lyrics = lyrics;
+    }
+
     public Long getId() {
         return this.id;
     }

@@ -32,7 +32,7 @@ public class UserDaoTest {
 //                .addAsManifestResource("META-INF/persistence.xml", "persistence.xml")
                 .addAsManifestResource("test-persistence.xml",
                         ArchivePaths.create("persistence.xml"))
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+                    .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
     @Test
