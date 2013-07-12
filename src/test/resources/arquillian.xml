@@ -10,4 +10,13 @@
             <property name="resourcesXml">src/test/resources/glassfish-resources.xml</property>
         </configuration>
     </container>
+    <container qualifier="glassfish3-managed">
+        <configuration>
+            <property name="glassFishHome">C:/glassfish3</property>
+            <property name="adminHost">localhost</property>
+            <property name="adminPort">4848</property>
+            <property name="adminUser">admin</property>
+            <property name="adminPassword"></property>
+        </configuration>
+    </container>
 </arquillian>
