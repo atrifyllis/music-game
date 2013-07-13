@@ -120,9 +120,8 @@ public class GameHistory implements Serializable {
         if (lyrics != null ? !lyrics.equals(that.lyrics) : that.lyrics != null) return false;
         if (status != null ? !status.equals(that.status) : that.status != null) return false;
         if (title != null ? !title.equals(that.title) : that.title != null) return false;
-        if (!user.equals(that.user)) return false;
+        return user.equals(that.user);
 
-        return true;
     }
 
     @Override

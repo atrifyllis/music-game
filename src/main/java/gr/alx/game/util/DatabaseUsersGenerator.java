@@ -28,38 +28,28 @@ public class DatabaseUsersGenerator {
 
     @PostConstruct
     public void initGameUsers() {
-        Map<String, GameUser> users = new HashMap<>();
+
         if (userDao.listUsers().size() == 0) {
 
             GameUser user = new GameUser("Alexandra", "alexkalantzi@gmail.com");
-            users.put("Alexandra", user);
             userDao.addUser(user);
             user = new GameUser("Alexandros", "otinanism@gmail.com");
-            users.put("Alexandros", user);
             userDao.addUser(user);
             user = new GameUser("Eleni", "epapageorgo@gmail.com");
-            users.put("Eleni", user);
             userDao.addUser(user);
             user = new GameUser("Ifi", "ifitaz@gmail.com");
-            users.put("Ifi", user);
             userDao.addUser(user);
             user = new GameUser("Kotz", "dkotzonis@gmail.com");
-            users.put("Kotz", user);
             userDao.addUser(user);
             user = new GameUser("Nota", "tsigarida@gmail.com");
-            users.put("Nota", user);
             userDao.addUser(user);
             user = new GameUser("Myrto", "myrtokolyva@gmail.com");
-            users.put("Myrto", user);
             userDao.addUser(user);
             user = new GameUser("Varvara", "v.zania@gmail.com");
-            users.put("Varvara", user);
             userDao.addUser(user);
             user = new GameUser("Voula", "voulamit@gmail.com");
-            users.put("Voula", user);
             userDao.addUser(user);
             user = new GameUser("Giorgos", "giorgermanos@googlemail.com");
-            users.put("Giorgos", user);
             userDao.addUser(user);
         }
     }

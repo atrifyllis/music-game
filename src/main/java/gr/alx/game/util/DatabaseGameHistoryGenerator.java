@@ -33,7 +33,6 @@ public class DatabaseGameHistoryGenerator {
 
     @PostConstruct
     public void initGameUsers() {
-        Map<String, GameUser> users = new HashMap<>();
         Date now = new Date();
         if (historyDao.listGameHistoryForDate(now).size() == 0) {
             GameUser user = userDao.getUserByUsername("Alexandra");

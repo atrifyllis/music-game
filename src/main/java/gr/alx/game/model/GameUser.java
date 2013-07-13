@@ -89,9 +89,8 @@ public class GameUser implements Serializable
         if (version != user.version) return false;
         if (email != null ? !email.equals(user.email) : user.email != null) return false;
         if (!id.equals(user.id)) return false;
-        if (username != null ? !username.equals(user.username) : user.username != null) return false;
+        return !(username != null ? !username.equals(user.username) : user.username != null);
 
-        return true;
     }
 
     @Override
