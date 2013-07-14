@@ -3,13 +3,11 @@ package gr.alx.game.service;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
-import com.sun.jersey.api.client.GenericType;
 import com.sun.jersey.api.client.WebResource;
-import com.sun.jersey.api.client.config.ClientConfig;
-import com.sun.jersey.api.client.config.DefaultClientConfig;
+import gr.alx.game.model.GameUser;
 import gr.alx.game.model.YoutubeDataResponse;
 
-import javax.ws.rs.core.MediaType;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,4 +37,5 @@ public class YoutubeDataService {
 
         return response == null ? "" : output.getTitle();
     }
+
 }
