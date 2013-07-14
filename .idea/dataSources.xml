@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="965486648">
+  <component name="DataSourceManagerImpl" format="xml" hash="1966282014">
     <data-source source="LOCAL" name="DERBY" product="Apache Derby" version="10.8.1.2 - (1095077)" jdbc-version="4.0" driver-name="Apache Derby Network Client JDBC Driver" driver-version="10.8.1.2 - (1095077)" uuid="47b9d15c-e24d-497b-8b5f-0fa1d059f0c3">
       <identifier-quote-string>&quot;</identifier-quote-string>
       <synchronize>true</synchronize>
@@ -8,7 +8,7 @@
       <jdbc-url>jdbc:derby://localhost:1527/music_game</jdbc-url>
       <user-name>APP</user-name>
       <user-password>dfebdffadffa</user-password>
-      <schema-pattern>*.APP</schema-pattern>
+      <schema-pattern>*</schema-pattern>
       <libraries>
         <library>
           <url>file://C:/glassfish3/javadb/lib/derbyclient.jar</url>

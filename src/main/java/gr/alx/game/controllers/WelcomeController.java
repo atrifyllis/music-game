@@ -24,21 +24,17 @@ public class WelcomeController {
 
     @Inject
     UserDao userDao;
-//    @Inject
-//    DatabaseUsersGenerator usersGenerator;
 
     public String doWelcome(){
-//        Map<String,GameUser> userMap = usersGenerator.initGameUsers();
+
         GameUser user = new GameUser("test", "test");
 
         try {
             userDao.addUser(user);
         } catch (Exception e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
-
         List<GameUser> gameUserList = userDao.listUsers();
-
         return "Users in database: "+gameUserList.size();
     }
 }

@@ -13,7 +13,7 @@ import java.util.List;
 @Stateless
 public class GameHistoryDao {
     @PersistenceContext
-    EntityManager em;
+    private EntityManager em;
 
 //    public GameUser getUser(Long id) {
 //        return em.find(GameUser.class, id);
@@ -25,7 +25,7 @@ public class GameHistoryDao {
 //        return (GameUser) query.getSingleResult();
 //    }
 
-    public List<GameHistory> listGameHistoryForDate(Date date) {
+    public List listGameHistoryForDate(Date date) {
         Query query = em.createQuery("select h from GameHistory h where h.date=:date");
         query.setParameter("date", date, TemporalType.DATE);
         return query.getResultList();

@@ -11,7 +11,7 @@ import java.util.List;
 @Stateless
 public class UserDao {
     @PersistenceContext
-    EntityManager em;
+    private EntityManager em;
 
     public GameUser getUser(Long id) {
         return em.find(GameUser.class, id);
